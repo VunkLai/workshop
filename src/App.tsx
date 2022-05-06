@@ -1,9 +1,10 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { ThemeOptions } from "@mui/material";
 
 const createCustomTheme = () => {
-  const options = {
+  const themeOptions: ThemeOptions = {
     palette: { mode: "dark" },
     components: {
       MuiUseMediaQuery: {
@@ -32,7 +33,7 @@ const createCustomTheme = () => {
       },
     },
   };
-  const theme = createTheme({ ...options });
+  const theme = createTheme(themeOptions);
   return responsiveFontSizes(theme);
 };
 
